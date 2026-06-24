@@ -61,4 +61,4 @@ Contributions, issues, and feature requests are welcome.
 
 ## 📜 License
 
-This project is created for educational and learning purposes.
+This project is created for educational and learning purpose.

@@ -381,10 +381,11 @@ span {
 }
 
 .box-img {
-    height: 200px;
+    height:230px;
     width: 100%;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
     background-color: #f3f3f3;  /* fallback if image missing */
     margin: 10px 0;
     border-radius: 2px;

@@ -1,0 +1,21 @@
+# Ignore image files
+
+# By extension
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.ico
+*.bmp
+*.tif
+*.tiff
+*.avif
+
+# Common image directories
+/images/
+/img/
+/assets/images/
+/public/images/
+/static/images/

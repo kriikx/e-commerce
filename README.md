@@ -117,14 +117,6 @@ docker build -t amazon-clone .
 docker run -d -p 8080:80 --name amazon-clone amazon-clone
 ```
 
-## 📸 Project Preview
-
-Add a screenshot here:
-
-```markdown
-![Amazon Clone](images/screenshot.png)
-```
-
 ## 🎯 Learning Objectives
 
 This project was created to practice:
@@ -147,10 +139,6 @@ This project was created to practice:
 - Add a backend and database
 - Make the website fully responsive
 - Deploy the Dockerized application
-
-## 👨‍💻 Author
-
-**Your Name**
 
 ---
 

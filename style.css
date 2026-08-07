@@ -39,7 +39,7 @@ body {
 }
 
 .logo {
-    background-image: url("amazon_logo.png");
+    background-image: url("images/logo/amazon_logo.png");
     background-size: cover;
     height: 50px;
     width: 100%;

@@ -1,21 +1,30 @@
-# Ignore image files
-
-# By extension
-*.png
+# Ignore large image files
 *.jpg
 *.jpeg
+*.png
+*.webp
 *.gif
 *.svg
-*.webp
-*.ico
-*.bmp
-*.tif
-*.tiff
-*.avif
 
-# Common image directories
-/images/
-/img/
-/assets/images/
-/public/images/
-/static/images/
+# Git LFS (Large File Storage)
+# For tracking large images separately
+# *.jpg filter=lfs diff=lfs merge=lfs -text
+# *.webp filter=lfs diff=lfs merge=lfs -text
+# *.png filter=lfs diff=lfs merge=lfs -text
+
+# Dependencies
+node_modules/
+npm-debug.log
+
+# Build outputs
+dist/
+build/
+.env
+.env.local
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo

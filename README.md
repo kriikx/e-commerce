@@ -1,18 +1,17 @@
-# Amazon Clone 🛒
+# Amazon Clone 🛒🐳
 
-A responsive **Amazon Clone** built using **HTML and CSS only**.\
-This project recreates the basic look and layout of an Amazon-style
-e-commerce website for frontend practice.
+A frontend **Amazon Clone** built using **HTML and CSS**, and containerized using **Docker with Nginx**.
+
+This project recreates the basic layout and visual design of an Amazon-style e-commerce website and is intended for frontend and Docker practice.
 
 ## 📁 Project Structure
 
-``` text
+```text
 E-COMMERCE/
 │
 ├── images/
-│   └── # Product and website images
-│
 ├── .gitignore
+├── Dockerfile
 ├── index.html
 ├── README.md
 └── style.css
@@ -20,73 +19,139 @@ E-COMMERCE/
 
 ## 🚀 Features
 
--   Amazon-inspired navigation bar
--   Search bar UI
--   Product sections and cards
--   Product images
--   Category sections
--   Responsive styling
--   Footer section
--   Clean and simple e-commerce layout
+- Amazon-inspired navigation bar
+- Search bar UI
+- Product sections and product cards
+- Product images
+- Category sections
+- Responsive styling
+- Footer section
+- Dockerized using Nginx
 
 ## 🛠️ Technologies Used
 
--   **HTML5** -- Website structure
--   **CSS3** -- Styling and layout
+- **HTML5** – Website structure
+- **CSS3** – Styling and layout
+- **Docker** – Containerization
+- **Nginx** – Web server
 
-> No JavaScript, frameworks, or backend technologies are used in this
-> project.
+> No JavaScript, frameworks, backend, or database are used.
 
-## ▶️ How to Run
+## 🐳 Run with Docker
 
-1.  Clone the repository:
+### 1. Clone the repository
 
-``` bash
+```bash
 git clone <your-repository-url>
+cd E-COMMERCE
 ```
 
-2.  Open the project folder.
-3.  Open `index.html` in your browser.
+### 2. Build the Docker image
 
-You can also use the **Live Server** extension in VS Code for easier
-development.
+```bash
+docker build -t amazon-clone .
+```
+
+### 3. Run the container
+
+```bash
+docker run -d -p 8080:80 --name amazon-clone amazon-clone
+```
+
+### 4. Open the website
+
+Open:
+
+```text
+http://localhost:8080
+```
+
+Your Amazon Clone is now running inside a Docker container.
+
+## 🔍 Docker Commands
+
+Check running containers:
+
+```bash
+docker ps
+```
+
+Stop the container:
+
+```bash
+docker stop amazon-clone
+```
+
+Start it again:
+
+```bash
+docker start amazon-clone
+```
+
+Remove the container:
+
+```bash
+docker rm -f amazon-clone
+```
+
+## 🐳 Dockerfile
+
+```dockerfile
+FROM nginx:alpine
+
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
+```
+
+Nginx serves the HTML, CSS, and image files from the Docker container.
+
+## 🔄 After Making Changes
+
+If you modify `index.html`, `style.css`, or files inside `images/`, rebuild the image:
+
+```bash
+docker stop amazon-clone
+docker rm amazon-clone
+docker build -t amazon-clone .
+docker run -d -p 8080:80 --name amazon-clone amazon-clone
+```
 
 ## 📸 Project Preview
 
-Add a screenshot of your project here:
+Add a screenshot here:
 
-``` markdown
+```markdown
 ![Amazon Clone](images/screenshot.png)
 ```
 
-## 🎯 Purpose
+## 🎯 Learning Objectives
 
 This project was created to practice:
 
--   HTML page structure
--   CSS styling
--   Flexbox and layout
--   Creating reusable product sections
--   Building an e-commerce-style interface
--   Organizing frontend project files
+- HTML page structure
+- CSS styling
+- Flexbox and layout
+- Creating product sections
+- Organizing frontend project files
+- Docker images and containers
+- Serving a static website using Nginx
 
 ## 🔮 Future Improvements
 
-Possible upgrades for future versions:
-
--   Add JavaScript functionality
--   Add shopping cart functionality
--   Add product search and filtering
--   Add login/signup pages
--   Add product details pages
--   Connect a backend and database
--   Make the website fully responsive for all screen sizes
+- Add JavaScript functionality
+- Add shopping cart functionality
+- Add product search and filtering
+- Add login/signup pages
+- Add product details pages
+- Add a backend and database
+- Make the website fully responsive
+- Deploy the Dockerized application
 
 ## 👨‍💻 Author
 
 **Your Name**
 
-------------------------------------------------------------------------
+---
 
-⭐ If you found this project useful, consider giving the repository a
-star!
+⭐ If you found this project useful, consider giving the repository a star!

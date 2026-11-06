@@ -1,4 +1,4 @@
-# Amazon Clone 🛒🐳
+# Amazon Clone 🛒 🐳
 
 A frontend **Amazon Clone** built using **HTML and CSS**, and containerized using **Docker with Nginx**.
 
